@@ -7,10 +7,9 @@
 }
 
 :root {
-  --bg-color: #2d2e30;
+  --bg-color: #202124;
   --border-color: #f1f3f43d;
-  --input-bg:
-    #747775;
+  --input-bg: #747775;
   --sidebar-active: #41331c;
   --font-family: 'Roboto', sans-serif;
 }
@@ -28,7 +27,7 @@ a {
 }
 
 .common {
-  padding-top: 6rem;
+  padding-top: 5rem;
   width: 100%;
   height: auto;
   display: flex;
@@ -37,24 +36,102 @@ a {
   .content {
     height: 100vh;
     width: 80%;
-    background-color: rgb(153, 147, 147);
+    // background-color: rgb(153, 147, 147);
+
   }
 
   .notes {
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    height: 100vh;
+    width: 90%;
+    // background-color: red;
+
+    .inputlinkdiv {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 7rem;
+      width: 100%;
+
+      .innerinpu {
+        height: 3rem;
+        width: 55%;
+        border-radius: .3rem;
+        border: 1px solid var(--input-bg);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .text {
+          display: flex;
+          align-items: center;
+          padding-left: 1rem;
+          height: 100%;
+          width: 40%;
+          font-family: var(--font-family);
+
+          p {
+            padding-left: .4rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: rgb(183, 173, 173);
+          }
+        }
+
+        .iccon {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 35%;
+          height: 100%;
+
+          .wow {
+            font-size: 1.4rem;
+            padding: .4rem;
+            border-radius: 50%;
+            color: var(--input-bg);
+            height: 2.2rem;
+            width: 2.2rem;
+
+            &:hover {
+              color: white;
+              background-color: #7c847e;
+            }
+          }
+        }
+      }
+    }
 
     .note {
-      width: 300px;
-      min-height: 100px;
-      overflow: hidden;
-      background-color: rgb(80, 17, 17);
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 4px;
-      padding: 10px;
-      font-size: 16px;
+      border-radius: .4rem;
+      width: 14rem;
+      border: 1px solid var(--input-bg);
+      min-height: 19rem;
+      cursor: pointer;
+      margin-top: 1rem;
+
+      .head {
+        padding-left: 1rem;
+        font-family: var(--font-family);
+        color: #dcd5d5;
+        font-weight: 800;
+        height: 3.4rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 1.1rem;
+      }
+
+      .con {
+        margin-top: 0rem;
+        padding: 1rem;
+        display: flex;
+        text-align: justify;
+        color: #dcd5d5;
+        font-weight: 700;
+        font-family: var(--font-family);
+        font-size: .8rem;
+      }
     }
   }
 }
