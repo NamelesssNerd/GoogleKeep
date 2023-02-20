@@ -22,9 +22,9 @@ const Header = () => {
             </div>
             <div className="rightheader">
                 <div className="one">
-                    <IoMdRefresh className='userintt'/>
-                    <MdOutlineViewAgenda className='userintt'/>
-                    <IoSettingsOutline className='userintt'/>
+                    <IoMdRefresh className='userintt' />
+                    <MdOutlineViewAgenda className='userintt' />
+                    <IoSettingsOutline className='userintt' />
                 </div>
                 <div className="two">
                     <MdOutlineViewComfy className='more' />
@@ -35,5 +35,4 @@ const Header = () => {
         </div>
     )
 }
-
 export default Header

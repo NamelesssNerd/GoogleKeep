@@ -315,13 +315,6 @@ a {
     align-items: center;
     padding-left: 1.5rem;
     cursor: pointer;
-
-    .usersectionactive {
-      background-color: var(--sidebar-active);
-      border-top-right-radius: 2rem;
-      border-bottom-right-radius: 2rem;
-    }
-
     .ico {
       color: var(--input-bg);
       font-size: 1.3rem;
@@ -342,5 +335,10 @@ a {
       color: white;
     }
 
+  }
+  .usersectionactive {
+    background-color: var(--sidebar-active);
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
   }
 }
