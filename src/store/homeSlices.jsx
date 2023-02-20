@@ -4,7 +4,9 @@ const homeSlice = createSlice({
     name: "home",
     initialState: homeinitial,
     reducers: {
-        addHomeNotes(state, action) { },
+        addHomeNotes(state, action) {
+            console.log(action.payload)
+         },
         removeHomeNotes(state, action) { }
     }
 });

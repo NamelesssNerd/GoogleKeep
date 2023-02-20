@@ -7,9 +7,6 @@ import { RiInboxArchiveLine, RiDeleteBin6Line } from "react-icons/ri"
 import { Link } from 'react-router-dom'
 const SideBar = () => {
     const [active, setactive] = useState(0)
-    const wow = () => {
-        alert()
-    }
     return (
         <div className="sidebar">
             <Link to={NavigationStrings.Notes}  >
