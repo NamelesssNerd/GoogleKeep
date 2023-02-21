@@ -29,10 +29,10 @@ a {
 .connn {
   columns: 4 15rem;
   padding: 10px;
-  column-gap: 30px;
+  column-gap: 15px;
   padding: 10px;
   margin: 0px auto;
-  width: 1100px;
+  width: 100%;
 }
 
 .connnn {
@@ -131,6 +131,7 @@ a {
         }
       }
     }
+
     .inputlinkdiv {
       cursor: pointer;
       display: flex;
@@ -190,12 +191,15 @@ a {
     }
 
     .notee {
-      border-radius: .4rem;
+      border-radius: .6rem;
       width: 55%;
       border: 1px solid var(--input-bg);
-      min-height: 15rem;
       cursor: pointer;
       margin-top: 1rem;
+
+      &:last-child {
+        margin-bottom: 2rem;
+      }
 
       .head {
         padding-left: 1rem;
@@ -222,8 +226,8 @@ a {
     }
 
     .note {
-      border-radius: .3rem;
-      margin-top: .4rem;
+      border-radius: .6rem;
+      margin-top: .3rem;
       border: 1px solid var(--input-bg);
       break-inside: avoid;
       page-break-inside: avoid;
