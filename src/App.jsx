@@ -15,7 +15,7 @@ const App = () => {
       <Header />
       <SideBar />
       <Routes>
-        <Route path={NavigationStrings.Home} element={<Home />} />
+        <Route path={NavigationStrings.Home} element={<Notes />} />
         <Route path={NavigationStrings.Reminder} element={<Reminder />} />
         <Route path={NavigationStrings.Notes} element={<Notes />} />
         <Route path={NavigationStrings.Edit} element={<EditLabel />} />
