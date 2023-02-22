@@ -120,12 +120,14 @@ const Notes = () => {
               const { title, note } = currenElem;
               console.log(title, note)
               return (
-                <div className={viewValue != true ? "note" : "notee"} key={index} onDoubleClick={() => deleteData(index)}>
+                <div className={viewValue != true ? "note" : "notee"} key={index}>
                   <h5 className='head'>{title}</h5>
                   <div className="con">
                     <p>{note}</p>
                   </div>
-                  <RiDeleteBin6Line className='ico acc' />
+                  <div style={{ height: "2rem", width: "100%", display: "flex", alignItems: "center", justifyContent: "end", paddingRight: "2rem" }}>
+                    <RiDeleteBin6Line style={{ fontSize: "1.3rem", color: "red", cursor: "pointer" }} onClick={()=>deleteData(index)} />
+                  </div>
                 </div>
               )
             })}

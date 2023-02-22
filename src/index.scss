@@ -190,6 +190,7 @@ a {
       border: 1px solid var(--input-bg);
       cursor: pointer;
       margin-top: 1rem;
+      word-wrap: break-word;
 
       &:last-child {
         margin-bottom: 2rem;
@@ -223,6 +224,7 @@ a {
       border: 1px solid var(--input-bg);
       break-inside: avoid;
       page-break-inside: avoid;
+      word-break: break-all;
 
 
       .head {
