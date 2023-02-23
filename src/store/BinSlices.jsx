@@ -1,11 +1,22 @@
 import { createSlice } from '@reduxjs/toolkit'
-const bininitial = []
+let bininitial = []
+let puranoData = JSON.parse(localStorage.getItem("bin"));
+if (puranoData == null) {
+    const jsonparse = []
+    localStorage.setItem("bin", JSON.stringify(jsonparse))
+} else {
+    bininitial = puranoData
+}
 const binSlices = createSlice({
     name: "bin",
     initialState: bininitial,
     reducers: {
-        addBinNotes(state, action) { },
-        removeBinNotes(state, action) { }
+        addBinNotes(state, action) {
+            state.push(action.payload)
+        },
+        removeBinNotes(state, action) {
+            state.splice(action.payload, 1)
+        }
     }
 });
 export const { addBinNotes, removeBinNotes } = binSlices.actions

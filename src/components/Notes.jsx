@@ -10,6 +10,7 @@ import { BiUndo, BiRedo } from "react-icons/bi"
 import { useDispatch, useSelector } from 'react-redux'
 import { addHomeNotes, removeHomeNotes } from '../store/homeSlices'
 import { RiDeleteBin6Line } from "react-icons/ri"
+import { addBinNotes } from '../store/BinSlices';
 const Notes = () => {
   const dispatch = useDispatch()
   const [saveValue, setsaveValue] = useState({
@@ -23,7 +24,6 @@ const Notes = () => {
   const notedata = useSelector((state) => {
     return state.home
   })
-  console.log(typeof notedata)
   const saveData = () => {
     if (showInp == true) {
       setshowInp(false)
@@ -64,8 +64,9 @@ const Notes = () => {
     let finalOne = JSON.stringify(notedata)
     localStorage.setItem("note", finalOne)
   }, [notedata])
-  const deleteData = (position) => {
+  const deleteData = (position, binData) => {
     dispatch(removeHomeNotes(position))
+    dispatch(addBinNotes(binData))
   }
   return (
     <div className="common" >
@@ -118,7 +119,6 @@ const Notes = () => {
           <div className={viewValue != true ? "connn" : "connnn"} onClick={saveData}>
             {notedata.map((currenElem, index) => {
               const { title, note } = currenElem;
-              console.log(title, note)
               return (
                 <div className={viewValue != true ? "note" : "notee"} key={index}>
                   <h5 className='head'>{title}</h5>
@@ -126,7 +126,7 @@ const Notes = () => {
                     <p>{note}</p>
                   </div>
                   <div style={{ height: "2rem", width: "100%", display: "flex", alignItems: "center", justifyContent: "end", paddingRight: "2rem" }}>
-                    <RiDeleteBin6Line style={{ fontSize: "1.3rem", color: "red", cursor: "pointer" }} onClick={()=>deleteData(index)} />
+                    <RiDeleteBin6Line style={{ fontSize: "1.3rem", color: "red", cursor: "pointer" }} onClick={() => deleteData(index, currenElem)} />
                   </div>
                 </div>
               )
